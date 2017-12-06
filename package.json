@@ -1,0 +1,28 @@
+{
+  "name": "edu-doc-lints",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "edu-doc-lint": "bin/edu-doc-lint.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node bin/edu-doc-lint.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rookiebob/edu-doc-lint.git"
+  },
+  "author": "rookiebob",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rookiebob/edu-doc-lint/issues"
+  },
+  "homepage": "https://github.com/rookiebob/edu-doc-lint#readme",
+  "dependencies": {
+    "commander": "^2.11.0",
+    "glob": "^7.1.2",
+    "rd":"^1.1.2"
+  }
+}
