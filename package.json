@@ -1,7 +1,7 @@
 {
   "name": "edu-doc-lint",
-  "version": "0.0.1",
-  "description": "",
+  "version": "0.1.0",
+  "description": "edu-doc-lint",
   "main": "index.js",
   "bin": {
     "edu-doc-lint": "bin/edu-doc-lint.js"
