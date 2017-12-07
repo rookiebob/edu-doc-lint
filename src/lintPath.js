@@ -9,15 +9,23 @@ function getRightFilePath(filePath){
 
 function lintPath(filePath){
     const fileContent = fs.readFileSync(filePath , 'utf8');
-    const reg = /(@(method|member|module|class).*module:pool\/)(.*)(\..*)/ig;
+    const reg = /(@(method|member|module|class).*:?pool\/)([^\.\n]+)(\..+)?/ig;
     const _rightFilePath = getRightFilePath(filePath);
     const res = fileContent.replace(reg,function(word , $1 , $2 ,$3 , $4){
-        //console.log('--%s----%s' , $3 , _rightFilePath);
+        //console.log('-%s ** %s ** %s ** %s' , $1 , $2 ,$3 , $4);
+        let result = '';
         if($3 != _rightFilePath){
+            //console.log($1 + _rightFilePath +  ($4!='undefined')?$4:'');
             console.log(">>该文件下被替换的错误路径：" ,word);
         }
-        if($1 && $2 && $3 && $4){
-            return $1 + _rightFilePath + $4;
+        if($1 && $2 && $3){
+            if($4==undefined){
+                result = $1 + _rightFilePath;
+            }else {
+                result = $1 + _rightFilePath + $4;
+            }
+            //console.log(result);
+            return result;
         }
     });
 
