@@ -9,7 +9,8 @@ module.exports = function () {
     function main(){
         // 同步遍历目录下的所有js文件
         rd.eachFileFilterSync('./src', /\.js$/, function (f, s) {
-            console.log(f);
+            console.log('开始处理：【%s】' ,f);
+            lintPath(f);
         });
     }
 

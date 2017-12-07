@@ -1,6 +1,6 @@
 {
-  "name": "edu-doc-lints",
-  "version": "0.0.0",
+  "name": "edu-doc-lint",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "bin": {
