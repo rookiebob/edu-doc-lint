@@ -1,6 +1,6 @@
 {
   "name": "edu-doc-lint",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "edu-doc-lint",
   "main": "index.js",
   "bin": {
@@ -23,6 +23,7 @@
   "dependencies": {
     "commander": "^2.11.0",
     "glob": "^7.1.2",
-    "rd":"^1.1.2"
+    "rd":"^1.1.2",
+    "jsdoc-to-markdown":"^3.0.2"
   }
 }
